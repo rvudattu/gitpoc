@@ -21,7 +21,7 @@ def count_cur_sim(request):
         conn.close()
         return JsonResponse({"status": "success", "data": res})
         '''
-        return JsonResponse({"status": "success", "data": "Response from main branch"})
+        return JsonResponse({"status": "success", "data": "Response from sub branch"})
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
 
