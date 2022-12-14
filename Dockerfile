@@ -25,9 +25,9 @@ RUN apt-get update && \
 # CMD exec gunicorn --bind :8080 --workers 1 --threads 8 --timeout 0 manage.py runserver:app
 # CMD ["gunicorn", "manage.py", "runserver", "0.0.0.0:8080"] 
 
-EXPOSE 8082
+EXPOSE 8080
 # start server
 ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8082"]
+CMD ["runserver", "0.0.0.0:8080"]
 
 # CMD exec gunicorn --bind :8081 --workers 1 --threads 8 --timeout 0 python manage.py runserver:application
