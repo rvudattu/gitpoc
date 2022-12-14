@@ -28,6 +28,6 @@ RUN apt-get update && \
 EXPOSE 8081
 # start server
 ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8081"]
+CMD ["runserver", "0.0.0.0:8082"]
 
 # CMD exec gunicorn --bind :8081 --workers 1 --threads 8 --timeout 0 python manage.py runserver:application
