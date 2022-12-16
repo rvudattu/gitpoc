@@ -3,7 +3,7 @@ name: git-django-cloud-poc
 
 on:
   push:
-    branches: [ gitbranch ]
+    branches: [ dev-awi ]
 #     - main
 
 env:
