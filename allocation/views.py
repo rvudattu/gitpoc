@@ -24,6 +24,14 @@ def count_cur_sim(request):
         return JsonResponse({"status": "success", "data": "Response from Git Poc Sub branch"})
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
+    
+ @api_view(['POST'])
+def test_api(request):
+    try:
+        return JsonResponse({"status": "success", "data": "Created by Pgarikap user for testing."})
+    except Exception as e:
+        return JsonResponse({"status": "failed", "msg": str(e)})
+
 
 @api_view(['GET'])
 def getresponse(request):
