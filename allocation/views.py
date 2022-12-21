@@ -21,6 +21,7 @@ def count_cur_sim(request):
         conn.close()
         return JsonResponse({"status": "success", "data": res})
         '''
+        # Added a comment to Main by Pgarikap user.
         return JsonResponse({"status": "success", "data": "Response from Git Poc Main branch"})
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
