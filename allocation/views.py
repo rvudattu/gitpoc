@@ -37,6 +37,7 @@ def getresponse(request):
 @api_view(['post'])
 def testApi(request):
     try:
+        # Added chnage from main user.
         return JsonResponse({"status":"success", "msg": "code merge ."})
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
