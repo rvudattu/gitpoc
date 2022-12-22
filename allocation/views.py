@@ -29,7 +29,7 @@ def count_cur_sim(request):
 def test_api_new(request):
     try:
         return JsonResponse({"status": "success", "data": "Created by Pgarikap user."})
-#         return JsonResponse({"status": "success", "data": "Created by Pgarikap user for testing .."})
+#         return JsonResponse({"status": "success", "data": "Created by Pgarikap user for testing."})
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
 
