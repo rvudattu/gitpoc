@@ -34,3 +34,9 @@ def getresponse(request):
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
 
+@api_view(['post'])
+def testApi(request):
+    try:
+        return JsonResponse({"msg": "code merge ."})
+    except Exception as e:
+        return JsonResponse({"status": "failed", "msg": str(e)})
