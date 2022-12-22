@@ -11,4 +11,5 @@ from allocation.views import count_cur_sim, getresponse
 urlpatterns =[
     path(r'count_cur_sim', count_cur_sim, name="To get count of rows."),
     path('getresponse', getresponse, name="To get response."),
+    path('test_api', test_api, name="To api in dev.")
 ]
