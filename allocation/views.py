@@ -30,7 +30,7 @@ def count_cur_sim(request):
 @api_view(['GET'])
 def getresponse(request):
     try:
-        return JsonResponse({"msg": "success."})
+        return JsonResponse({"status":"success", "msg": "success."})
     except Exception as e:
         return JsonResponse({"status": "failed", "msg": str(e)})
 
