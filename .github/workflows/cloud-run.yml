@@ -3,7 +3,9 @@ name: git-django-cloud-poc
 
 on:
   push:
-    branches: [ main-awi ]
+    branches: [main-awi]
+  pull_request:
+    branches: [main-awi]
 #     - main
 
 env:
@@ -45,7 +47,9 @@ jobs:
         gcloud builds submit \
           --quiet \
           --tag gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{  github.sha }}
+          
     # Deploy image to Cloud Run
+    
     - name: Deploy to Cloud Run
       run: |-
         gcloud run deploy ${{ env.SERVICE_NAME }} \
